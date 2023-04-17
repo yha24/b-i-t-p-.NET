@@ -1,0 +1,44 @@
+﻿@model List<Model.Framework.tbl_products>
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <table id="datatablesSimple"
+           class="dataTable-table">
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Price</th>
+
+                <th>Detail</th>
+
+                <th>Images</th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.ID</th>
+                    <th>@item.Name</th>
+                    <th>@item.Price</th>
+                    <th>@item.Detail</th>
+                    <th>@item.images</th>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+
